@@ -12,6 +12,12 @@ do
 
     switch(menuOption)
     {
-
+        case MenuOptions.AddNewShift:
+            UserInput.AddShift();
+            break;
+        case MenuOptions.ViewEditShift:
+            break;
+        case MenuOptions.DeleteShift:
+            break;
     }
 } while (menuOption != MenuOptions.Exit);
