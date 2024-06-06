@@ -14,10 +14,10 @@ do
     switch(menuOption)
     {
         case MenuOptions.AddNewShift:
-            UserInput.AddShift();
+            Menu.AddShift();
             break;
         case MenuOptions.ViewEditShift:
-            await UserInput.ViewShifts();
+            await Menu.ViewShifts();
             break;
     }
 } while (menuOption != MenuOptions.Exit);

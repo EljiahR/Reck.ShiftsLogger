@@ -40,4 +40,12 @@ internal class APICalls
         HttpResponseMessage response = await client.DeleteAsync($"api/ShiftLogs/{shift.Id}");
         return response.StatusCode;
     }
+
+    public static async Task<Uri> PutShiftAsync(ShiftLog shift)
+    {
+        HttpResponseMessage response = await client.PutAsJsonAsync($"api/ShiftLogs/{shift.Id}", shift);
+        response.EnsureSuccessStatusCode();
+
+        return response.Headers.Location;
+    }
 }
