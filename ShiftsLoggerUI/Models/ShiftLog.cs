@@ -1,4 +1,4 @@
-﻿namespace ShiftsLoggerAPI.Models;
+﻿namespace ShiftsLoggerUI.Models;
 
 public class ShiftLog
 {

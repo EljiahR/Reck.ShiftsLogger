@@ -1,5 +1,6 @@
 ﻿using ShiftsLoggerUI;
 using Spectre.Console;
+using System.Configuration;
 
 string? menuOption;
 do
@@ -16,8 +17,10 @@ do
             UserInput.AddShift();
             break;
         case MenuOptions.ViewEditShift:
+            await UserInput.EditShift();
             break;
         case MenuOptions.DeleteShift:
             break;
     }
 } while (menuOption != MenuOptions.Exit);
+Console.WriteLine(ConfigurationManager.ConnectionStrings["Base"].ConnectionString);
