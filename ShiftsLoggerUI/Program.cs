@@ -17,9 +17,7 @@ do
             UserInput.AddShift();
             break;
         case MenuOptions.ViewEditShift:
-            await UserInput.EditShift();
-            break;
-        case MenuOptions.DeleteShift:
+            await UserInput.ViewShifts();
             break;
     }
 } while (menuOption != MenuOptions.Exit);

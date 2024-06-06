@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using System.Net;
 
 namespace ShiftsLoggerUI;
 
@@ -34,4 +35,9 @@ internal class APICalls
         return response.Headers.Location;
     }
 
+    public static async Task<HttpStatusCode> DeleteShiftAsync(ShiftLog shift)
+    {
+        HttpResponseMessage response = await client.DeleteAsync($"api/ShiftLogs/{shift.Id}");
+        return response.StatusCode;
+    }
 }
