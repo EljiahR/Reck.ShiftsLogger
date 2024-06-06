@@ -28,7 +28,7 @@ internal class APICalls
 
     public static async Task<Uri> PostShiftAsync(ShiftLog shift)
     {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/",shift);
+        HttpResponseMessage response = await client.PostAsJsonAsync("api/ShiftLogs/", shift);
         response.EnsureSuccessStatusCode();
 
         return response.Headers.Location;

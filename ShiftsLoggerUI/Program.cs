@@ -23,4 +23,3 @@ do
             break;
     }
 } while (menuOption != MenuOptions.Exit);
-Console.WriteLine(ConfigurationManager.ConnectionStrings["Base"].ConnectionString);
